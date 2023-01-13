@@ -19,12 +19,12 @@ public class LoginTest {
             driver = new ChromeDriver();
         }
 
-        else if(browser =="Firefox"){
+        else if(browser == "Firefox"){
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
         }
 
-        else if(browser =="Edge"){
+        else if(browser == "Edge"){
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
         }
