@@ -1,3 +1,14 @@
+/*
+Locator             Description
+class name	        Locates elements whose class name contains the search value (compound class names are not permitted)
+css selector	    Locates elements matching a CSS selector
+id	                Locates elements whose ID attribute matches the search value
+name	            Locates elements whose NAME attribute matches the search value
+link text	        Locates anchor elements whose visible text matches the search value
+partial link text	Locates anchor elements whose visible text contains the search value. If multiple elements are matching, only the first one will be selected.
+tag name	        Locates elements whose tag name matches the search value
+xpath	            Locates elements matching an XPath expression
+*/
 package ui;
 
 import org.openqa.selenium.By;
@@ -11,7 +22,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Locators {
     // TODO Auto-generated method stub
     public static WebDriver driver;
-    public static String browser = "Edge";
+    public static String browser = "Chrome";
+    /**
+     * @param args
+     */
     public static void main(String[] args){
         if(browser == "Chrome"){
             WebDriverManager.chromedriver().setup();
@@ -28,22 +42,23 @@ public class Locators {
             driver = new EdgeDriver();
         }
         
-        driver.get("http://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+        // driver.get("http://www.saucedemo.com/");
+        driver.get("https://www.selenium.dev/documentation/webdriver/elements/locators/");
+        // driver.findElement(By.className("form_input")).sendKeys("standard_user");
+        // driver.findElement(By.cssSelector("#user-name")).sendKeys("standard-user");
+        // driver.findElement(By.id("user-name")).sendKeys("standard_user");
+        // driver.findElement(By.name("user-name")).sendKeys("standard_user");
+        
+        // UPDATE link text AND partial link text LATER
+        
+        // driver.findElement(By.tagName("input")).sendKeys("standard_user");
+        // driver.findElement(By.xpath("/html/body/div/div/div[2]/div[1]/div[1]/div/form/div[1]/input")).sendKeys("standard_user");
+        
+        
+        // driver.findElement(By.linkText("Overview")).click();
+        driver.findElement(By.partialLinkText("Getting")).click();
         
         driver.close();
-
-    }
-    public static WebDriver getDriver() {
-        return driver;
-    }
-    public static void setDriver(WebDriver driver) {
-        Locators.driver = driver;
-    }
-    public static String getBrowser() {
-        return browser;
-    }
-    public static void setBrowser(String browser) {
-        Locators.browser = browser;
+        
     }
 }
