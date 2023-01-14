@@ -12,8 +12,6 @@ tag name	        Locates elements whose tag name matches the search value
 xpath	            Locates elements matching an XPath expression
 
 */
-package ui;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
