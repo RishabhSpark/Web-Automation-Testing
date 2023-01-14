@@ -32,7 +32,7 @@ public class Locators {
         driver.get("http://www.saucedemo.com/");
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         
-        driver.close();
+        // driver.close();
 
     }
 }
