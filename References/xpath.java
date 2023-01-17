@@ -22,24 +22,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class xpath {
-
-    public static WebDriver driver;
-    public static String browser = "Chrome";
-    public static void main(String[] args){
-        if(browser == "Chrome"){
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-        }
-
-        else if(browser == "Firefox"){
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
-        }
-
-        else if(browser.equals("Edge")){
-            WebDriverManager.edgedriver().setup();
-            driver = new EdgeDriver();
-        }
         
         driver.get("http://www.saucedemo.com/");
 
