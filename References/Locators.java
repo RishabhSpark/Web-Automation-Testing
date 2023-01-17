@@ -21,24 +21,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Locators {
-    // TODO Auto-generated method stub
-    public static WebDriver driver;
-    public static String browser = "Chrome";
-    public static void main(String[] args){
-        if(browser == "Chrome"){
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-        }
-
-        else if(browser == "Firefox"){
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
-        }
-
-        else if(browser == "Edge"){
-            WebDriverManager.edgedriver().setup();
-            driver = new EdgeDriver();
-        }
         
         // driver.get("http://www.saucedemo.com/");
         driver.get("https://www.selenium.dev/documentation/webdriver/elements/locators/");
@@ -53,7 +35,7 @@ public class Locators {
         driver.findElement(By.linkText("Overview")).click();
         driver.findElement(By.partialLinkText("Getting")).click();
         
-        driver.close();
+        // driver.close();
         
     }
 }
