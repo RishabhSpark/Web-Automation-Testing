@@ -8,6 +8,11 @@ descendant          Selects all descendant(child, gandchild, etc.)          //ta
                     of current node          
 descendant-or-self  Selects current node + all descendants                  //tagname[@Attribute='Value']//descendant-or-self::tagname
                     (if tagname of descendant and self are same)
+ancestor            Selects all ancestors(parent, gandparent, etc.)         //tagname[@Attribute='Value']//ancestor::tagname
+                    of current node          
+ancestor-or-self    Selects current node + all ancestors                    //tagname[@Attribute='Value']//ancestor-or-self::tagname
+                    (if tagname of ancestors and self are same)
+                    
 */
 
 import org.openqa.selenium.By;
@@ -48,6 +53,18 @@ public class xpath_axes {
             String class_attribute = element.getAttribute("class");
             System.out.println(class_attribute+"\n");
         }       
+
+
+
+        //      ---------------------------------------XPATH ANCESTOR(or-self) + storing in List + size check---------------------------------------
+        List<WebElement> attribute_select_ancestor = driver.findElements(By.xpath("//div[@class='grecaptcha-error']//ancestor::div"));
+        int attribute_select_ancestor_size = attribute_select_ancestor.size();
+        System.out.println(attribute_select_ancestor_size);
+
+        List<WebElement> attribute_select_ancestor_or_self = driver.findElements(By.xpath("//div[@class='grecaptcha-error']//ancestor-or-self::div"));
+        int attribute_select_ancestor_or_self_size = attribute_select_ancestor_or_self.size();
+        System.out.println(attribute_select_ancestor_or_self_size);  
+
         // driver.close();
     }
 }
