@@ -11,10 +11,13 @@ descendant-or-self  Selects current node + all descendants                  //ta
 ancestor            Selects all ancestors(parent, gandparent, etc.)         //tagname[@Attribute='Value']//ancestor::tagname
                     of current node          
 ancestor-or-self    Selects current node + all ancestors                    //tagname[@Attribute='Value']//ancestor-or-self::tagname
-                    (if tagname of ancestors and self are same)             //tagname[@Attribute='Value']//following::tagname
-following           Selects all nodes that appear after current node
-following-sibling   Selects all node having same parent as current node     //tagname[@Attribute='Value']//following-or-self::tagname
-                    and appears after the current no
+                    (if tagname of ancestors and self are same)             
+following           Selects all nodes that appear after current node        //tagname[@Attribute='Value']//following::tagname
+following-sibling   Selects all node having same parent as current node     //tagname[@Attribute='Value']//following-sibling::tagname
+                    and appears after the current node
+predecing           Selects all nodes that appear before current node       //tagname[@Attribute='Value']//predecing::tagname
+predecing-sibling   Selects all node having same parent as current node     //tagname[@Attribute='Value']//predecing-sibling::tagname
+                    and appears before the current node
 
 */
 
@@ -69,7 +72,7 @@ public class xpath_axes {
         System.out.println(attribute_select_ancestor_or_self_size);  
 
 
-//      ---------------------------------------XPATH FOLLOWING(or-self) + storing in List + size check---------------------------------------
+//      ---------------------------------------XPATH FOLLOWING(sibling) + storing in List + size check---------------------------------------
         List<WebElement> attribute_select_following = driver.findElements(By.xpath("//div[@class='w-full custom__border xls:mt-20 mt-10']//following::div"));
         int attribute_select_following_size = attribute_select_following.size();
         System.out.println(attribute_select_following_size);
@@ -78,6 +81,15 @@ public class xpath_axes {
         int attribute_select_following_sibling_size = attribute_select_following_sibling.size();
         System.out.println(attribute_select_following_sibling_size);
 
+
+//      ---------------------------------------XPATH PRECEDING(sibling) + storing in List + size check---------------------------------------
+        List<WebElement> attribute_select_preceding = driver.findElements(By.xpath("//div[@class='w-full custom__border xls:mt-20 mt-10']//preceding::div"));
+        int attribute_select_preceding_size = attribute_select_preceding.size();
+        System.out.println(attribute_select_preceding_size);
+
+        List<WebElement> attribute_select_preceding_sibling = driver.findElements(By.xpath("//div[@class='w-full custom__border xls:mt-20 mt-10']//preceding-sibling::div"));
+        int attribute_select_preceding_sibling_size = attribute_select_preceding_sibling.size();
+        System.out.println(attribute_select_preceding_sibling_size);
 
 
         // driver.close();
