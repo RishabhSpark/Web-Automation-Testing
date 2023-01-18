@@ -29,11 +29,12 @@ public class xpath_axes {
             driver = new EdgeDriver();
         }
         
-        // driver.get("http://www.saucedemo.com/");
-        // driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        // driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        // driver.findElement(By.xpath("/html/body/div/div/div[2]/div[1]/div[1]/div/form/input")).click();
-
+        driver.get("https://accounts.lambdatest.com/register");
+        
+        driver.findElement(By.xpath("//input[@id='name']//self::input")).sendKeys("Name???"); //self axes
+        driver.findElement(By.xpath("//select[@id='country_code']//child::option[@data-countrycode='AS']")).click(); //child axes
+        driver.findElement(By.xpath("//option[@data-countrycode='AF']//parent::select")).click(); //parent axes
+        driver.findElement(By.xpath("//select[@id='country_code']//parent::div//child::input")).sendKeys("234567825"); //parent and child axes together
         
         // driver.close();
 
