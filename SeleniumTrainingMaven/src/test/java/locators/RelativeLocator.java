@@ -1,4 +1,4 @@
-package ui;
+package locators;
 
 import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
