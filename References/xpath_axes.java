@@ -11,8 +11,11 @@ descendant-or-self  Selects current node + all descendants                  //ta
 ancestor            Selects all ancestors(parent, gandparent, etc.)         //tagname[@Attribute='Value']//ancestor::tagname
                     of current node          
 ancestor-or-self    Selects current node + all ancestors                    //tagname[@Attribute='Value']//ancestor-or-self::tagname
-                    (if tagname of ancestors and self are same)
-                    
+                    (if tagname of ancestors and self are same)             //tagname[@Attribute='Value']//following::tagname
+following           Selects all nodes that appear after current node
+following-sibling   Selects all node having same parent as current node     //tagname[@Attribute='Value']//following-or-self::tagname
+                    and appears after the current no
+
 */
 
 import org.openqa.selenium.By;
@@ -33,7 +36,7 @@ public class xpath_axes {
         driver.findElement(By.xpath("//select[@id='country_code']//parent::div//child::input")).sendKeys("234567825"); //parent and child axes together
         
 
-        //      -----------------------------------------XPATH DESCENDANT(or-self) + getAttribute with List-----------------------------------------
+//      -----------------------------------------XPATH DESCENDANT(or-self) + getAttribute with List-----------------------------------------
         // THIS FOR ONLY ONE
         // WebElement attribute_select = driver.findElement(By.xpath("//select[@id='country_code']//descendant::option"));
         // String label_attribute = attribute_select.getAttribute("label");
@@ -56,7 +59,7 @@ public class xpath_axes {
 
 
 
-        //      ---------------------------------------XPATH ANCESTOR(or-self) + storing in List + size check---------------------------------------
+//      ---------------------------------------XPATH ANCESTOR(or-self) + storing in List + size check---------------------------------------
         List<WebElement> attribute_select_ancestor = driver.findElements(By.xpath("//div[@class='grecaptcha-error']//ancestor::div"));
         int attribute_select_ancestor_size = attribute_select_ancestor.size();
         System.out.println(attribute_select_ancestor_size);
@@ -64,6 +67,18 @@ public class xpath_axes {
         List<WebElement> attribute_select_ancestor_or_self = driver.findElements(By.xpath("//div[@class='grecaptcha-error']//ancestor-or-self::div"));
         int attribute_select_ancestor_or_self_size = attribute_select_ancestor_or_self.size();
         System.out.println(attribute_select_ancestor_or_self_size);  
+
+
+//      ---------------------------------------XPATH FOLLOWING(or-self) + storing in List + size check---------------------------------------
+        List<WebElement> attribute_select_following = driver.findElements(By.xpath("//div[@class='w-full custom__border xls:mt-20 mt-10']//following::div"));
+        int attribute_select_following_size = attribute_select_following.size();
+        System.out.println(attribute_select_following_size);
+
+        List<WebElement> attribute_select_following_sibling = driver.findElements(By.xpath("//div[@class='w-full custom__border xls:mt-20 mt-10']//following-sibling::div"));
+        int attribute_select_following_sibling_size = attribute_select_following_sibling.size();
+        System.out.println(attribute_select_following_sibling_size);
+
+
 
         // driver.close();
     }
