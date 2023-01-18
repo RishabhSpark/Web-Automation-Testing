@@ -72,8 +72,18 @@ public class xpath_axes {
         List<WebElement> attribute_select_ancestor_or_self = driver.findElements(By.xpath("//div[@class='grecaptcha-error']//ancestor-or-self::div"));
         int attribute_select_ancestor_or_self_size = attribute_select_ancestor_or_self.size();
         System.out.println(attribute_select_ancestor_or_self_size);  
+
+
+//      ---------------------------------------XPATH FOLLOWING(or-self) + storing in List + size check---------------------------------------
+        List<WebElement> attribute_select_following = driver.findElements(By.xpath("//div[@class='w-full custom__border xls:mt-20 mt-10']//following::div"));
+        int attribute_select_following_size = attribute_select_following.size();
+        System.out.println(attribute_select_following_size);
+
+        List<WebElement> attribute_select_following_sibling = driver.findElements(By.xpath("//div[@class='w-full custom__border xls:mt-20 mt-10']//following-sibling::div"));
+        int attribute_select_following_sibling_size = attribute_select_following_sibling.size();
+        System.out.println(attribute_select_following_sibling_size);
         
-        // driver.close();
+        driver.close();
 
     }
 }
