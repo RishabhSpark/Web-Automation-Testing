@@ -19,6 +19,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class xpath_functions {
+    public static void main(String[] args){
         driver.get("http://www.saucedemo.com/");
 
         driver.findElement(By.xpath("//input[starts-with(@id,'user')]")).sendKeys("Testing"); // starts-with function for fining Username
