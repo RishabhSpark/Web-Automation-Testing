@@ -59,8 +59,19 @@ public class xpath_axes {
         List<WebElement> all_div_descendant_or_self = driver.findElements(By.xpath("//div[@class='clearfix registeraArea signUpWithEmail']//descendant-or-self::div"));
         for(WebElement element : all_div_descendant_or_self){   
             String class_attribute = element.getAttribute("class");
-            System.out.println(class_attribute+"\n");
-        }       
+            System.out.println(class_attribute+"\n");   
+        }      
+        
+        
+
+//      ---------------------------------------XPATH ANCESTOR(or-self) + storing in List + size check---------------------------------------
+        List<WebElement> attribute_select_ancestor = driver.findElements(By.xpath("//div[@class='grecaptcha-error']//ancestor::div"));
+        int attribute_select_ancestor_size = attribute_select_ancestor.size();
+        System.out.println(attribute_select_ancestor_size);
+
+        List<WebElement> attribute_select_ancestor_or_self = driver.findElements(By.xpath("//div[@class='grecaptcha-error']//ancestor-or-self::div"));
+        int attribute_select_ancestor_or_self_size = attribute_select_ancestor_or_self.size();
+        System.out.println(attribute_select_ancestor_or_self_size);  
         
         // driver.close();
 
