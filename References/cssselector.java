@@ -1,5 +1,8 @@
 /*
-FORMAT -> tagname#elementID
+
+FORMAT -> tagname#elementID (IF BY ID)
+FORMAT -> tagname[AttributeName = 'AttributeValue']
+
 */
 
 import org.openqa.selenium.By;
