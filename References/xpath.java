@@ -22,7 +22,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class xpath {
-        
+    public static void main(String[] args){
         driver.get("http://www.saucedemo.com/");
 
         driver.findElement(By.xpath("//input[@id='user-name']")).sendKeys("Testing"); // Relative xpath
