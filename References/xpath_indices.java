@@ -15,7 +15,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-public class xpath_indices {        
+public class xpath_indices {     
+    public static void main(String[] args){   
         driver.get("http://www.saucedemo.com/");
         driver.findElement(By.xpath("(//input)[1]")).sendKeys("standard_user");
         driver.findElement(By.xpath("(//input)[2]")).sendKeys("secret_sauce");
