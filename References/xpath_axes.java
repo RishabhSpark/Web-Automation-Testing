@@ -1,6 +1,7 @@
 /*
 
 AXES                USE                                                     FORMAT
+
 self                Indicates the node itself                               //tagname[@Attribute='Value']//self::tagname
 parent              Indicates the parent node                               //tagname[@Attribute='Value']//parent::tagname    
 child               Indicates the child node                                //tagname[@Attribute='Value']//child::tagname 
