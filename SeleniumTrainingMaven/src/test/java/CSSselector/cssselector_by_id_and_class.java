@@ -1,6 +1,5 @@
 /*
 
-FORMAT -> tagname[AttributeName = 'AttributeValue']
 FORMAT BY ID-> tagname#elementID
 FORMAT BY CLASS NAME -> tagname.elementID
 
@@ -17,7 +16,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-public class cssselector {
+public class cssselector_by_id_and_class {
 
     public static WebDriver driver;
     public static String browser = "Chrome";
@@ -38,7 +37,6 @@ public class cssselector {
         }
         
         driver.get("https://accounts.lambdatest.com/register");
-        driver.findElement(By.cssSelector("input[name='email']")).sendKeys("emailid@test.com"); //Basic cssSelector format
         
         driver.findElement(By.cssSelector("#name")).sendKeys("First Name "); // Copied cssSelector
         driver.findElement(By.cssSelector("input#name")).sendKeys("Second Name "); // Self written cssSelector with ID
