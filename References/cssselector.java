@@ -1,25 +1,22 @@
 /*
 
-FORMAT -> tagname#elementID (IF BY ID)
 FORMAT -> tagname[AttributeName = 'AttributeValue']
+FORMAT BY ID-> tagname#elementID
+FORMAT BY CLASS NAME -> tagname.elementID
 
 */
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 
 public class cssselector {
     public static void main(String[] args){
         
         driver.get("https://accounts.lambdatest.com/register");
-        driver.findElement(By.cssSelector("#name")).sendKeys("User Name"); // Copied cssSelector
-        driver.findElement(By.cssSelector("input#name")).sendKeys("Full Name"); // Self written cssSelector
+        driver.findElement(By.cssSelector("input[name='email']")).sendKeys("emailid@test.com"); //Basic cssSelector format
+        
+        driver.findElement(By.cssSelector("#name")).sendKeys("First Name "); // Copied cssSelector
+        driver.findElement(By.cssSelector("input#name")).sendKeys("Second Name "); // Self written cssSelector with ID
+        driver.findElement(By.cssSelector("input.w-full")).sendKeys("Third Name "); // cssSelector with class
         
         // driver.close();
 
