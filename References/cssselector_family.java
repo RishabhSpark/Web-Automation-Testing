@@ -11,13 +11,16 @@ next sibling                Selects the element immediately following           
 
 PSEUDO-CLASS -> A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected webelement
 
-FUNCTION NAME               USE                                                 DENOTED BY          FORMAT
+FUNCTION NAME               USE                                                 DENOTED BY              FORMAT
 
-first-child                 Returns the first child of selected node            :first_child        tagname[AttributeName='AttributeValue'] tagname:first_child
-last-child          1       Returns the last child of selected node             :last_child         tagname[AttributeName='AttributeValue'] tagname:last_child
-nth-child                   Returns the nth child of selected node              :nth-child()        tagname[AttributeName='AttributeValue'] tagname:nth-child(child_number)
-nth-last-child              Returns the nth last child of selected node         :nth-last-child()   tagname[AttributeName='AttributeValue'] tagname:nth-last-child(child_number_from_back)
-
+first-child                 Returns the first child of selected node            :first_child            tagname[AttributeName='AttributeValue'] tagname:first_child
+last-child          1       Returns the last child of selected node             :last_child             tagname[AttributeName='AttributeValue'] tagname:last_child
+nth-child                   Returns the nth child of selected node              :nth-child()            tagname[AttributeName='AttributeValue'] tagname:nth-child(child_number)
+nth-last-child              Returns the nth last child of selected node         :nth-last-child()       tagname[AttributeName='AttributeValue'] tagname:nth-last-child(child_number_from_back)
+first-of-type               Returns the first child of specified type           :first-of-type          tagname[AttributeName='AttributeValue'] tagname:first-of-type 
+last-of-type                Returns the first child of specified type           :last-of-type           tagname[AttributeName='AttributeValue'] tagname:last-of-type  
+nth-of-type                 Returns the first child of specified type           :nth-of-type            tagname[AttributeName='AttributeValue'] tagname:nth-of-type 
+nth-last-of-type            Returns the first child of specified type           :nth-last-of-type       tagname[AttributeName='AttributeValue'] tagname:nth-last-of-type  
 
 */
 import java.util.List;
@@ -61,6 +64,24 @@ public class cssselector_family {
         System.out.println("21st last child: " + last_child_21);
 
         
+
+//      -----------------first-of-type, last-of-type, nth-of-type, nth-last-of-type-----------------        
+        String first_of_type;
+        first_of_type = driver.findElement(By.cssSelector("select#country_code>option:first-of-type")).getAttribute("label");
+        System.out.println("First child: " + first_of_type);
+
+        String last_of_type;
+        last_of_type = driver.findElement(By.cssSelector("select#country_code>option:last-of-type")).getAttribute("label");
+        System.out.println("Last child: " + last_of_type);
+
+        String nth_of_type;
+        nth_of_type = driver.findElement(By.cssSelector("select#country_code>option:nth-of-type(21)")).getAttribute("label");
+        System.out.println("21st first child: " + nth_of_type);
+
+        String nth_last_of_type;
+        nth_last_of_type = driver.findElement(By.cssSelector("select#country_code>option:nth-last-of-type(21)")).getAttribute("label");
+        System.out.println("21st last child: " + nth_last_of_type);
+
         // driver.close();
     }
 }
