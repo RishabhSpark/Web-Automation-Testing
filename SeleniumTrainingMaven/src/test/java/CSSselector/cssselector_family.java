@@ -62,6 +62,24 @@ public class cssselector_family {
         String last_child_21;
         last_child_21 = driver.findElement(By.cssSelector("select#country_code :nth-last-child(21)")).getAttribute("label");
         System.out.println("21st last child: " + last_child_21);
+
+
+//      -----------------first-of-type, last-of-type, nth-of-type, nth-last-of-type-----------------        
+        String first_of_type;
+        first_of_type = driver.findElement(By.cssSelector("select#country_code>option:first-of-type")).getAttribute("label");
+        System.out.println("First child: " + first_of_type);
+
+        String last_of_type;
+        last_of_type = driver.findElement(By.cssSelector("select#country_code>option:last-of-type")).getAttribute("label");
+        System.out.println("Last child: " + last_of_type);
+
+        String nth_of_type;
+        nth_of_type = driver.findElement(By.cssSelector("select#country_code>option:nth-of-type(21)")).getAttribute("label");
+        System.out.println("21st first child: " + nth_of_type);
+
+        String nth_last_of_type;
+        nth_last_of_type = driver.findElement(By.cssSelector("select#country_code>option:nth-last-of-type(21)")).getAttribute("label");
+        System.out.println("21st last child: " + nth_last_of_type);
         
         
         // driver.close();
