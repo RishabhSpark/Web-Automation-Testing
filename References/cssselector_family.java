@@ -13,10 +13,10 @@ PSEUDO-CLASS -> A CSS pseudo-class is a keyword added to a selector that specifi
 
 FUNCTION NAME               USE                                                 DENOTED BY          FORMAT
 
-first-child                 Returns the first child of selected node            :first_child        tagname[AttributeName='AttributeValue'] :first_child
-last-child          1       Returns the last child of selected node             :last_child         tagname[AttributeName='AttributeValue'] :last_child
-nth-child                   Returns the nth child of selected node              :nth-child()        tagname[AttributeName='AttributeValue'] :nth-child(child_number)
-nth-last-child              Returns the nth last child of selected node         :nth-last-child()   tagname[AttributeName='AttributeValue'] :nth-last-child(child_number_from_back)
+first-child                 Returns the first child of selected node            :first_child        tagname[AttributeName='AttributeValue'] tagname:first_child
+last-child          1       Returns the last child of selected node             :last_child         tagname[AttributeName='AttributeValue'] tagname:last_child
+nth-child                   Returns the nth child of selected node              :nth-child()        tagname[AttributeName='AttributeValue'] tagname:nth-child(child_number)
+nth-last-child              Returns the nth last child of selected node         :nth-last-child()   tagname[AttributeName='AttributeValue'] tagname:nth-last-child(child_number_from_back)
 
 
 */
