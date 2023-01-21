@@ -45,10 +45,27 @@ public class webdriver_methods {
 
         driver.navigate().to("https://www.google.com/");
 
+
+        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+        driver.findElement(By.xpath("/html/body/div/div/div[2]/div[1]/div[1]/div/form/input")).click();
+
+        List<WebElement> webelements = driver.findElements(By.xpath("//div[@class='inventory_list']//child::div[@class='inventory_item']"));
+        System.out.println(webelements);
+
+        driver.navigate().to("https://accounts.lambdatest.com/register");
+        String windowhandle;
+        windowhandle = driver.getWindowHandle();
+        System.out.println(windowhandle);
+
+
+        driver.findElement(By.xpath("//a[@href='https://www.lambdatest.com/terms-of-service']")).click();
+        Set<String> windowhandles= driver.getWindowHandles();
+        System.out.println(windowhandles)
+
+
         // driver.close();
         driver.quit();
-
-        driver.close();
 
     }
 }
