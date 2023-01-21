@@ -13,7 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-public class basic_methods {
+public class webdriver_methods {
 
     public static WebDriver driver;
     public static String browser = "Chrome";

@@ -11,11 +11,14 @@ navigate()                      An abstract allowing the driver to access the br
 quit()                          Quits the driver, CLOSES ALL THE TABS
 close()                         CLOSES THE CURRENT TAB, quits the browser if there is only one tab open
 findElement(By by)              Finds the first webelement using the given query
-findElements(By by)             Finds a;; webelements within the current page using the given query
+findElements(By by)             Finds all webelements within the current page using the given query
+getWindowHandle()               Returns an opaque handle to this window that uniquely identifies it within the current driver instance
+getWindowHandles()              Returns a set of window handles which can be used to iterate over all open windows of the WebDriver instance by passing them to switchTo().webDriver.Options.window()
+switchTo()                      Send future commands to a different frame or window
 
 */
 
-public class basic_methods {
+public class webdriver_methods {
     public static void main(String[] args){
         driver.get("http://www.saucedemo.com/");
 
