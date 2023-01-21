@@ -1,6 +1,11 @@
 package Selenium;
 
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -51,7 +56,24 @@ public class basic_methods {
         System.out.println(page_source);
 
 
-        driver.navigate().to("https://www.google.com/");
+        // driver.navigate().to("https://www.google.com/");
+
+        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+        driver.findElement(By.xpath("/html/body/div/div/div[2]/div[1]/div[1]/div/form/input")).click();
+
+        List<WebElement> webelements = driver.findElements(By.xpath("//div[@class='inventory_list']//child::div[@class='inventory_item']"));
+        System.out.println(webelements);
+
+        driver.navigate().to("https://accounts.lambdatest.com/register");
+        String windowhandle;
+        windowhandle = driver.getWindowHandle();
+        System.out.println(windowhandle);
+
+
+        driver.findElement(By.xpath("//a[@href='https://www.lambdatest.com/terms-of-service']")).click();
+        Set<String> windowhandles= driver.getWindowHandles();
+        System.out.println(windowhandles);
 
         // driver.close();
         driver.quit();

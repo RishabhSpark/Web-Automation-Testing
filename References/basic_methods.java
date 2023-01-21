@@ -10,7 +10,8 @@ getPageSource()                 Get the source of the last loaded page
 navigate()                      An abstract allowing the driver to access the browser's history and to navigate to a given URL
 quit()                          Quits the driver, CLOSES ALL THE TABS
 close()                         CLOSES THE CURRENT TAB, quits the browser if there is only one tab open
-
+findElement(By by)              Finds the first webelement using the given query
+findElements(By by)             Finds a;; webelements within the current page using the given query
 
 */
 
