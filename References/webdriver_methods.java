@@ -61,7 +61,7 @@ public class webdriver_methods {
 
         driver.findElement(By.xpath("//a[@href='https://www.lambdatest.com/terms-of-service']")).click();
         Set<String> windowhandles= driver.getWindowHandles();
-        System.out.println(windowhandles)
+        System.out.println(windowhandles);
 
 
         // driver.close();
