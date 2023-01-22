@@ -33,6 +33,9 @@ public class select_dropdown{
         WebElement country_code_list = driver.findElement(By.id("country_code"));
         Select select = new Select(country_code_list);
 
+        WebElement first_option = select.getFirstSelectedOption();
+        System.out.println(first_option.getText());
+
         select.selectByIndex(5);
         Thread.sleep(2000);
 
