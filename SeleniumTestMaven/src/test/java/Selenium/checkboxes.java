@@ -36,8 +36,7 @@ public class checkboxes {
         driver.get("https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm");
         driver.manage().window().maximize();
 
-
-        driver.findElement(By.cssSelector("a#banner-accept")).click();
+        // driver.findElement(By.cssSelector("a#banner-accept")).click();
 
 
         // FINDING ALL CHECKBOXES
@@ -50,10 +49,11 @@ public class checkboxes {
 
 
         // SELECTING A CHECKBOX
-        WebElement rc_checkbox = driver.findElement(By.xpath("//input[@value='RC']"));
-        rc_checkbox.click();
-        Thread.sleep(1000);
-        rc_checkbox.click();
+        driver.findElement(By.xpath("//input[@value='RC']")).click();
+        System.out.println(driver.findElement(By.xpath("//input[@value='RC']")).isSelected());
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@value='RC']")).click();
+        System.out.println(driver.findElement(By.xpath("//input[@value='RC']")).isSelected());
 
         // driver.close();
         driver.quit();
