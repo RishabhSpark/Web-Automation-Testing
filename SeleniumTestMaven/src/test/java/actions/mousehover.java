@@ -7,7 +7,7 @@ Actions	            moveToElement(WebElement target, int xOffset, int yOffset)  
 
 */
 
-package Selenium;
+package actions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
