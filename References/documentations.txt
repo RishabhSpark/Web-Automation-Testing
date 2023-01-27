@@ -1,0 +1,2 @@
+Selenium -> https://www.selenium.dev/selenium/docs/api/java/index.html?overview-summary.html
+TestNG -> https://testng.org/doc/documentation-main.html
