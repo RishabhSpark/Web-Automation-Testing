@@ -35,13 +35,18 @@ public class screenshot{
         driver.get("https://pokemondb.net/pokedex/all");
         driver.manage().window().maximize();
 
+        // GETTING DATE AND TIME
         Date current_datetime = new Date();
         System.out.println(current_datetime);
         String screenshot_filename_datetime = current_datetime.toString().replace(" ", "-").replace(":", "-");
 
+
+        // TAKING SCREENSHOT
         File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        
+        //SAVING SCREENSHOT
         FileUtils.copyFile(screenshotFile, new File("SeleniumTestMaven/src/test/screenshots/" + "screenshot_"+screenshot_filename_datetime + ".png"));
-        // String screenshotBase64 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64); 
+        
 
         driver.quit();
         
