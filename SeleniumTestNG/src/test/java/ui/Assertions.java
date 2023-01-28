@@ -1,6 +1,6 @@
 /*
 
-Assertions documentation -> https://javadoc.io/doc/org.testng/testng/latest/org/testng/asserts/Assertion.html
+Assertion documentation -> https://javadoc.io/doc/org.testng/testng/latest/org/testng/asserts/Assertion.html
 
 */
 package ui;
