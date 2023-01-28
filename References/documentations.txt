@@ -1,2 +1,6 @@
-Selenium -> https://www.selenium.dev/selenium/docs/api/java/index.html?overview-summary.html
+Selenium -> https://www.selenium.dev/selenium/docs/api/java/index.html?overview-summary.html (Better)
 TestNG -> https://testng.org/doc/documentation-main.html
+
+Javadoc
+Seneium -> https://www.javadoc.io/doc/org.seleniumhq.selenium/selenium-api/3.141.59/index.html
+TestNG -> https://javadoc.io/doc/org.testng/testng/latest/index.html (Better)
