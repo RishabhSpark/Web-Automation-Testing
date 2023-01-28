@@ -16,7 +16,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.Test;
 
-public class Class_Group_Annotations {
+import common.CommonDataSetup;
+
+public class Class_Group_Annotations extends CommonDataSetup {
     // Runs before the each class
     @BeforeClass
     public void beforeClass(){
