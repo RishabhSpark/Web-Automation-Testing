@@ -1,3 +1,9 @@
+/*
+
+DOCUMENTATION -> https://testng.org/doc/documentation-main.html#test-groups
+
+*/
+
 package ui;
 
 import org.testng.annotations.Test;
