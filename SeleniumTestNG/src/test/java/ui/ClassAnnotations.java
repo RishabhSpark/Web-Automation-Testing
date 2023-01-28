@@ -1,5 +1,6 @@
 package ui;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -8,6 +9,11 @@ public class ClassAnnotations {
     @BeforeClass
     public void beforeClass(){
         System.out.println("Runs before class");
+    }
+
+    @AfterClass
+    public void afterClass(){
+        System.out.println("Runs after class");
     }
 
     @Test(priority = 1, groups = "FirstGroup")
