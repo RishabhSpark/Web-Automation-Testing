@@ -1,7 +1,10 @@
 /*
 
+DOCUMENTATION -> https://javadoc.io/doc/org.testng/testng/latest/org/testng/asserts/SoftAssert.html
+
 In normal assertion, the code stops as soon as one assertion fails.
 To avoid this we use SoftAssert. Here, even if one test fails, the rest will run. We usually use SoftAssert more. 
+SoftAssert() -> When an assertion fails, don't throw an exception but record the failure. Calling assertAll() will cause an exception to be thrown if at least one assertion failed.
 
 */
 package ui;
