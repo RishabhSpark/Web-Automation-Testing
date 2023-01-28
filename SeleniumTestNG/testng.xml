@@ -3,10 +3,10 @@
 <suite name="UI Testing">
     <test name="Functional testing">
         <classes>
-            <class name="ui.Tests_and_Methods/">
-            <class name="ui.Assertions/">
-            <class name="ui.SoftAssertions/">
-            <class name="ui.TestGroups/">
+            <class name="ui.Tests_and_Methods"/>
+            <class name="ui.Assertions"/>
+            <class name="ui.SoftAssertions"/>
+            <class name="ui.TestGroups"/>
         </classes>
     </test>
 </suite>
