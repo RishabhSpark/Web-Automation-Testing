@@ -9,7 +9,7 @@
         </groups>
         <classes>
             <class name="ui.Tests_and_Methods"/>
-            <class name="ui.Assertions"/>
+            <class name="ui.Assertions"/s>
         </classes>
     </test>
 </suite>
