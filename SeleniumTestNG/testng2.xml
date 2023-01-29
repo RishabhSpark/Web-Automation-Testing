@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Reading browser details from textng xml">
+    <test name="Reading browser details from textng xml">
+        <parameter name="browser" value="Chrome"></parameter>
+        <classes>
+            <class name="ui.LoginTest"/>
+        </classes>
+    </test>
+</suite>
