@@ -4,7 +4,7 @@
     <test name="Reading browser details from textng xml">
         <parameter name="browser" value="Chrome"></parameter>
         <classes>
-            <class name="ui.LoginTest"/>
+            <class name="ui.LoginTestExternalize_Parameters"/>
         </classes>
     </test>
 </suite>

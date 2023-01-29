@@ -5,10 +5,14 @@ DOCUMENTATION -> https://javadoc.io/doc/org.testng/testng/latest/org/testng/ITes
 */
 package common;
 
+import java.io.IOException;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 
-public class Listeners implements ITestListener {
+import utilities.screenshot_utils;
+
+public class Listeners extends screenshot_utils implements ITestListener {
     public void onTestStart(ITestListener result){
         System.out.println("Test case is starting");
     }
@@ -17,6 +21,12 @@ public class Listeners implements ITestListener {
     }
     
     public void onTestFailure(ITestListener result){
+        try {
+            getScreenshot();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         System.out.println("Test failed - screenshot captured");
     }
 
