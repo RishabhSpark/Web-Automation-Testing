@@ -11,8 +11,6 @@ package ui;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
-
 public class DataProviders {
 
     @Test(dataProvider = "dataset")
