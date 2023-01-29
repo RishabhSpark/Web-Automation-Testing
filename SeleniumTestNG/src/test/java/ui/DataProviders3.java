@@ -19,4 +19,14 @@ public class DataProviders3 {
     public void testcase2(String username, String password, String email){
         System.out.println(username + "\t" + password + "\t" + email);
     }
+
+    @Test(dataProvider = "dataset", dataProviderClass = Data_DataProvider_Fancy.class)     //Reference data from Data_DataProvider.java
+    public void testcase3(String username, String password){
+        System.out.println(username + "\t" + password);
+    }
+
+    @Test(dataProvider = "dataset", dataProviderClass = Data_DataProvider_Fancy.class)     //Reference data from Data_DataProvider.java
+    public void testcase4(String username, String password, String email){
+        System.out.println(username + "\t" + password + "\t" + email);
+    }
 }

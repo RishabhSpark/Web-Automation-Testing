@@ -27,7 +27,7 @@ public class Data_DataProvider {
         return data;
     }
     
-    @DataProvider(name="dataprovidername")
+    @DataProvider(name = "dataprovidername")
     public Object[][] dataset2(){
         return new Object[][]
         {
