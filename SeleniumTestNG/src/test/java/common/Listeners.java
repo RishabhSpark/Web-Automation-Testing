@@ -9,32 +9,37 @@ import java.io.IOException;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
+import org.testng.ITestResult;
+import org.testng.Reporter;
 
 import utilities.screenshot_utils;
 
 public class Listeners extends screenshot_utils implements ITestListener {
-    public void onTestStart(ITestListener result){
-        System.out.println("Test case is starting");
+    public void onTestStart(ITestResult result){
+        // System.out.println("Test case is starting");
+        Reporter.log("Method name is - " + result.getName());
     }
 
-    public void onTestSuccess(ITestListener result){
+    public void onTestSuccess(ITestResult result){
+        Reporter.log("Status is - " + result.getStatus());
     }
     
-    public void onTestFailure(ITestListener result){
+    public void onTestFailure(ITestResult result){
         try {
             getScreenshot();
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        System.out.println("Test failed - screenshot captured");
+        System.setProperty("org.uncommons.reporting.escape-output", "false");
+        Reporter.log("<a href=/"SeleniumTestNG/src/test/screenshots"> Test Results</a>");
     }
 
-    public void onTestSkipped(ITestListener result){
+    public void onTestSkipped(ITestResult result){
 
     }
 
-    public void onTestFailedButWithinSuccessPercentage(ITestListener result){
+    public void onTestFailedButWithinSuccessPercentage(ITestResult result){
 
     }
 
